@@ -25,6 +25,6 @@ work with the default server addresses of `127.0.0.1` in this specific use case.
 
 ## Installation
 
-Download the appropriate archive file from the [https://github.com/rahji/sentimental/releases/latest](Releases)
-page, place the `sentimental` binary [https://zwbetz.com/how-to-add-a-binary-to-your-path-on-macos-linux-windows/](somewhere in your path),
-and run it from your terminal (eg: Terminal.app in MacOS or [https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us&rtc=1](Windows Terminal))
+Download the appropriate archive file from the [Releases](https://github.com/rahji/sentimental/releases/latest)
+page, place the `sentimental` binary [somewhere in your path](https://zwbetz.com/how-to-add-a-binary-to-your-path-on-macos-linux-windows/),
+and run it from your terminal (eg: Terminal.app in MacOS or [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us&rtc=1)
