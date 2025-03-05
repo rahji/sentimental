@@ -3,6 +3,7 @@ module github.com/rahji/sentimental
 go 1.23.3
 
 require (
+	github.com/alecthomas/kong v1.8.1 // indirect
 	github.com/cdipaolo/goml v0.0.0-20220715001353-00e0c845ae1c // indirect
 	github.com/cdipaolo/sentiment v0.0.0-20200617002423-c697f64e7f10 // indirect
 	github.com/grassmudhorses/vader-go v0.0.0-20191126145716-003d5aacdb71 // indirect
