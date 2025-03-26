@@ -15,6 +15,7 @@ type CLIFlags struct {
 	OSCClientAddr string `kong:"default='127.0.0.1',name='client-addr',help='OSC client address'"`
 	OSCClientPort int    `kong:"default=8885,name='client-port',help='OSC client port'"`
 	Verbose       bool   `kong:"name='verbose',help='Show extra output in the terminal'"`
+	All           bool   `kong:"name='all',help='Send all values in /sentiment message'"`
 }
 
 func main() {
@@ -37,8 +38,14 @@ func main() {
 				fmt.Println("Compound/Final Sentiment:", sentiment.Compound)
 			}
 
-			msg := osc.NewMessage("/sentiment")
+			msg = osc.NewMessage("/sentiment")
 			msg.Append(float32(sentiment.Compound))
+			if cli.All {
+				msg.Append(float32(sentiment.Positive))
+				msg.Append(float32(sentiment.Negative))
+				msg.Append(float32(sentiment.Neutral))
+			}
+
 			if cli.Verbose {
 				fmt.Printf("Sending '%s' to new OSC Client on %s:%d\n", msg, cli.OSCClientAddr, cli.OSCClientPort)
 			}
